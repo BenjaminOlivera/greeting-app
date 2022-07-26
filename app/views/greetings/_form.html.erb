@@ -2,8 +2,8 @@
   <div class="card-body">
   <h5 class="card-title">Send me a message!</h5>
   <%= form_with(model: greeting, local: true) do |form| %>
-   <% if greating.errors.any?%>
-    <div class="error_explanation">
+   <% if greeting.errors.any? %>
+    <div id="error_explanation">
       <h2>
         <%= pluralize(greeting.errors.count, "error")%>
         prohibited this greeting for being saved:
@@ -21,13 +21,13 @@
         class: "form-control" %>
     </div>
     <div class="form-group">
-      <% form.text_area :message,
+      <%= form.text_area :message,
         placeholder: "Message",
         class: "form-control" %>
     </div>
     <div class="actions">
       <%= form.submit "Send!",
-      class: "btn btn-outline-primary btn-block"%>
+      class: "btn btn-outline-primary btn-block" %>
     </div>
     <% end %>
   </div>
