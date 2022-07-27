@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap.css";
+@import "bootstrap";
+
 main.container {
   width: auto;
   max-width: 680px;
